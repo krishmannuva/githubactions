@@ -1,0 +1,17 @@
+name: my first workflow
+
+on: push
+
+jobs:
+    list_and_read:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout
+          uses: actions/checkout@v4
+          
+        - name: list
+          run: ls -la
+          
+        - name: read
+          run: cat README.md  
+
